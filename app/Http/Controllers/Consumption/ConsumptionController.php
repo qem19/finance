@@ -10,6 +10,6 @@ class ConsumptionController extends Controller
 {
     public function add()
     {
-        return 123;
+        return view('consumption.add');
     }
 }
