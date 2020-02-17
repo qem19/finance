@@ -12,7 +12,14 @@ class CreateConsumptionTable extends Migration
     {
         Schema::create('consumption', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('comment')->nullable();
+            $table->unsignedBigInteger('category_id');
+            $table->integer('price');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('category');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
