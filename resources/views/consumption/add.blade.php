@@ -2,6 +2,6 @@
 
 @section('content')
 
-    test ji
+
 
 @endsection
