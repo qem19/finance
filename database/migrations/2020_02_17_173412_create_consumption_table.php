@@ -10,7 +10,7 @@ class CreateConsumptionTable extends Migration
 {
     public function up()
     {
-        Schema::create('consumption', function (Blueprint $table) {
+        Schema::create('consumptions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('comment')->nullable();
             $table->unsignedBigInteger('category_id');
@@ -18,13 +18,13 @@ class CreateConsumptionTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
-            $table->foreign('category_id')->references('id')->on('category');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('consumption');
+        Schema::dropIfExists('consumptions');
     }
 }

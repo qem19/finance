@@ -14,11 +14,14 @@ class ConsumptionController extends Controller
 {
     public function add()
     {
-        return view('consumption.add');
+        $categories = Category::all()->map->only(['id', 'name']);
+
+        return view('consumption.add', compact('categories'));
     }
 
     public function addHandle(AddConsumptionRequest $request)
     {
+        dd(12312312312);
         $params = $request->validated();
 
         $category = Category::find($params['category_id']);
