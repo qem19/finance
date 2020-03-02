@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\AddConsumptionRequest;
 use App\Modules\Category\Category;
 use App\Modules\Consumption\Commands\CreateConsumption;
-use App\User;
+use App\Modules\User\Models\User;
 
 class ConsumptionController extends Controller
 {
@@ -21,7 +21,6 @@ class ConsumptionController extends Controller
 
     public function addHandle(AddConsumptionRequest $request)
     {
-        dd(12312312312);
         $params = $request->validated();
 
         $category = Category::find($params['category_id']);

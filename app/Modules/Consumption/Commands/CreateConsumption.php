@@ -6,7 +6,7 @@ namespace App\Modules\Consumption\Commands;
 
 use App\Modules\Category\Category;
 use App\Modules\Consumption\Models\Consumption;
-use App\User;
+use App\Modules\User\Models\User;
 
 class CreateConsumption
 {
