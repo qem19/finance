@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read integer $id
  * @property-read integer $category_id
  * @property-read integer $price
- * @property-read integer $user_id
+ * @property-read integer $account_id
  * @property-read string $comment
 */
 class Consumption extends Model
@@ -19,7 +19,7 @@ class Consumption extends Model
     protected $fillable = [
         'category_id',
         'price',
-        'user_id',
+        'account_id',
         'comment'
     ];
 }

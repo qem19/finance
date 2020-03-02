@@ -7,18 +7,19 @@ namespace App\Modules\Consumption\Commands;
 use App\Modules\Category\Category;
 use App\Modules\Consumption\Models\Consumption;
 use App\Modules\User\Models\User;
+use App\Modules\Account\Models\Account;
 
 class CreateConsumption
 {
     private Category $category;
-    private User $user;
-    private int $price;
+    private Account $account;
+    private float $price;
     private ?string $comment;
 
-    public function __construct(Category $category, User $user, int $price, ?string $comment)
+    public function __construct(Category $category, Account $account, float $price, ?string $comment)
     {
         $this->category = $category;
-        $this->user = $user;
+        $this->account = $account;
         $this->price = $price;
         $this->comment = $comment;
     }
@@ -27,7 +28,7 @@ class CreateConsumption
     {
         Consumption::create([
             'category_id' => $this->category->id,
-            'user_id' => $this->user->id,
+            'account_id' => $this->account->id,
             'price' => $this->price,
             'comment' => $this->comment,
         ]);

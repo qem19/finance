@@ -14,12 +14,12 @@ class CreateConsumptionTable extends Migration
             $table->bigIncrements('id');
             $table->string('comment')->nullable();
             $table->unsignedBigInteger('category_id');
-            $table->integer('price');
-            $table->unsignedBigInteger('user_id');
+            $table->float('price');
+            $table->unsignedBigInteger('account_id');
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('account_id')->references('id')->on('accounts');
         });
     }
 

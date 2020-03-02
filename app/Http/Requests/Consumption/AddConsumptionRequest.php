@@ -13,6 +13,7 @@ class AddConsumptionRequest extends FormRequest
         return [
             'category_id' => 'required|integer',
             'price' => 'required|integer',
+            'account_id' => 'required|integer',
             'comment' => 'string',
         ];
     }
