@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * Scopes:
  * @method Builder|self byUser(User $user)
-*/
+ */
 class Account extends Model
 {
     protected $fillable = ['name', 'user_id', 'balance'];

@@ -1,12 +1,12 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
 
-    <form method="post" action="{{ route('addHandleConsumption') }}">
+    <form method="post" action="{{ route('consumption.addHandle') }}">
         @csrf
         <div class="form-group">
             <label for="price">Цена</label>
-            <input type="number" class="form-control" name="price" id="price" placeholder="Enter price">
+            <input required type="number" class="form-control" name="price" id="price" placeholder="Enter price">
         </div>
         <div class="form-group">
             <label for="category_id">Категория</label>
@@ -24,7 +24,10 @@
                 @endforeach
             </select>
         </div>
+        <div class="form-group">
+            <label for="comment">Комментарий</label>
+            <textarea class="form-control" name="comment" id="comment" cols="30" rows="3"></textarea>
+        </div>
         <button type="submit" class="btn btn-primary mb-2">Send</button>
     </form>
-
 @endsection

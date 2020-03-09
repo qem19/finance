@@ -8,13 +8,13 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class AddConsumptionRequest extends FormRequest
 {
-    function rules(): array
+    public function rules(): array
     {
         return [
             'category_id' => 'required|integer',
             'price' => 'required|integer',
             'account_id' => 'required|integer',
-            'comment' => 'string',
+            'comment' => 'nullable|string',
         ];
     }
 }

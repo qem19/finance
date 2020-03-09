@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace App\Modules\Consumption\Commands;
 
+use App\Modules\Account\Models\Account;
 use App\Modules\Category\Category;
 use App\Modules\Consumption\Models\Consumption;
-use App\Modules\User\Models\User;
-use App\Modules\Account\Models\Account;
 
 class CreateConsumption
 {

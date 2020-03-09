@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read int $id
  * @property-read string $name
  * @property-read string $type
-*/
+ */
 class Category extends Model
 {
     protected $fillable = ['name'];

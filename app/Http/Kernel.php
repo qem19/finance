@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http;
 
 use App\Http\Middleware\Authenticate;
@@ -46,10 +48,7 @@ class Kernel extends HttpKernel
             SubstituteBindings::class,
         ],
 
-        'api' => [
-            'throttle:60,1',
-            SubstituteBindings::class,
-        ],
+        'api' => ['throttle:60,1', SubstituteBindings::class],
     ];
 
     protected $routeMiddleware = [
