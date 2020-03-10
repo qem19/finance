@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read string $name
  * @property-read int $user_id
  * @property-read float $balance
+ * @property-read float $goal_balance
  *
  * Scopes:
  * @method Builder|self byUser(User $user)

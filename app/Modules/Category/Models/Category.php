@@ -13,5 +13,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Category extends Model
 {
-    protected $fillable = ['name'];
+    public const ADD_TYPE = 'add';
+    public const SUB_TYPE = 'sub';
+
+    protected $fillable = ['name', 'type'];
 }

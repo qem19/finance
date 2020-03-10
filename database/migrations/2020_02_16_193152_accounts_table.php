@@ -15,6 +15,7 @@ class AccountsTable extends Migration
             $table->string('name');
             $table->unsignedBigInteger('user_id');
             $table->float('balance');
+            $table->float('goal_balance');
 
             $table->foreign('user_id')->references('id')->on('users');
         });
