@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Modules\Budget\Commands;
 
 use App\Modules\Budget\Models\Budget;
+use App\Modules\Budget\Models\BudgetConsumption;
 use App\Modules\Category\Category;
 
 class AddConsumptionToBudget
@@ -16,5 +17,16 @@ class AddConsumptionToBudget
     public function __construct(Budget $budget, Category $category, float $amount)
     {
         $this->budget = $budget;
+        $this->category = $category;
+        $this->amount = $amount;
+    }
+
+    public function handle()
+    {
+        BudgetConsumption::create([
+            'budget_id' => $this->budget->id,
+            'category_id' => $this->category->id,
+            'amount' => $this->amount,
+        ]);
     }
 }
