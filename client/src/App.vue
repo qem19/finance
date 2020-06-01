@@ -3,17 +3,15 @@
     v-app-bar(app color="primary" dark)
       span Finance
     v-content
-        route-link
+        router-view
 </template>
 
 <script>
-
 export default {
-  components: {
+  data() {
+    return {
 
+    }
   },
-  data: () => ({
-    //
-  }),
 };
 </script>
