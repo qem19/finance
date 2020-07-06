@@ -2,7 +2,7 @@
     .consumption-add
         v-form
             v-select(:items="form.categories" label="Категория" v-model="consumption.category_id")
-            v-btn(@click="add") Add
+            v-btn(@click="add") Save
 </template>
 
 <script>

@@ -7,10 +7,8 @@ Route::get('/', 'DashboardController@index')
     ->middleware('auth')
     ->name('home');
 
-Auth::routes();
-
 Route::namespace('Consumption')
     ->prefix('consumption')
     ->name('consumption.')
-    ->middleware('auth')
+    ->middleware(['web_client', 'auth'])
     ->group(__DIR__ . '/consumption.php');

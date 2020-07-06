@@ -7,7 +7,7 @@ namespace App\Http\Controllers\Consumption;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AddConsumptionRequest;
 use App\Modules\Account\Models\Account;
-use App\Modules\Category\Category;
+use App\Modules\Category\Models\Category;
 use App\Modules\Consumption\Commands\CreateConsumption;
 use Illuminate\Http\Request;
 
