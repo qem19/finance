@@ -18,7 +18,6 @@ class ConsumptionController extends Controller
         $categories = Category::all()->map->only(['id', 'name']);
         $user = $request->user();
         $accounts = Account::byUser($user)->get()->map->only(['id', 'name']);
-
         return view('consumption.add', compact('categories', 'accounts'));
     }
 
